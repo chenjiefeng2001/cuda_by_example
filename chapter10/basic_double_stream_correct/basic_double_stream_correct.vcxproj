@@ -11,8 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E2E9A953-B6D4-4F47-AD74-57EB1FCA2098}</ProjectGuid>
-    <RootNamespace>heat_2d</RootNamespace>
+    <ProjectGuid>{9F9B3CEE-BCC2-473B-90DE-7FE002425A5D}</ProjectGuid>
+    <RootNamespace>basic_double_stream_correct</RootNamespace>
+    <!-- 閻庢鍠栭幖顐﹀春濡ゅ懎绠伴柛銉戝懏姣?Windows SDK 闂佺粯顨呴悧濠傦耿娴煎瓨鏅€光偓閸曘劌浜炬慨姗嗗墰閸?VS2022 婵炴潙鍚嬫穱娲吹濠婂牆绀夐柕濞垮労濡查亶鏌ｉ悙鍙夛紨缂佽鲸绻冮幏鍛村幢濡も偓椤絽鈽夐幘绛规敾婵炶尪娉曠划娆撳礃閸?-->
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -21,6 +23,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <!-- 婵烇絽娴傞崰妤呭极婵傚憡鍊烽柣褍鎽滅粣妤呮倶?v142 闂佽　鍋撻梺顐ｇ缁€?v143 (VS 2022 婵炴垶鎸婚幐楣冨极? -->
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -30,10 +33,12 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
+    <!-- 婵烇絽娴傞崰妤呭极婵傚憡鍊烽柣褍鎽滅粣妤呮倶?v142 闂佽　鍋撻梺顐ｇ缁€?v143 (VS 2022 婵炴垶鎸婚幐楣冨极? -->
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <!-- 缂佺虎鍙庨崰鏇犳崲濮橆厽浜ゆ繛鍡樻尭濞咃繝鏌ｉ妸銉ヮ伀濠⒀勵殜瀵敻顢楅埀顒冦亹閸ф妞介悘鐐跺亹缁嬫垿鎮楅悷閭︽Ъ妞ゃ儱锕幆?CUDA 闂佺粯顨呴悧濠傦耿閹殿喒鍋撻悷鎷屽闁告瑥绻戠粙澶愬焵椤掑嫭鍤?-->
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.6.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -45,10 +50,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>$(MSBuildThisFileDirectory)..\..\lib;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>$(MSBuildThisFileDirectory)..\..\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -99,6 +100,7 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <!-- 闁哄鏅滈悷鈺呭闯閻戣姤鍎嶉柛鏇ㄥ幖椤ｅジ鏌￠崼顐㈠鐟滄媽鍎荤粻娑㈠川濞ｎ兘鍋撹箛鏃傗枖閹煎瓨绻勯悷鎰版煛?props 婵犮垼娉涚€氼喖鈻撻幋锔藉亱闁割偆鍠愰幏閬嶆煕濞嗘帗鑵圭紒鏃€鎸抽幊?-->
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.6.targets" />
   </ImportGroup>
 </Project>
